@@ -154,7 +154,21 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 
   window.firebaseReady = true;
 })();
-</script><tw-passagedata pid="1" name="meh" tags="" position="775,375" size="100,100"></tw-passagedata><tw-passagedata pid="2" name="Start" tags="" position="1025,400" size="100,100">You&#39;re shivering in the rain. A distant house gives hope. A girl opens the door — stunning, mysterious.
+</script><tw-passagedata pid="1" name="meh" tags="" position="775,375" size="100,100"></tw-passagedata><tw-passagedata pid="2" name="Start" tags="" position="1025,400" size="100,100">:: Start
+
+&lt;&lt;set $score = 0&gt;&gt;
+
+Rain poured like it meant to drown me. My jacket was soaked through, my fingers numb. The trail had disappeared hours ago, and I was just walking, hoping.
+
+Then—rooftops. Faint through the fog.
+
+I pushed forward, boots heavy with mud, until I reached the first house. I stood under the awning, shivering, heart pounding. I didn’t knock. I heard some noices inside and smell of food. i wanted to knock, but I didn&#39;t
+
+But, The door creaked open.
+
+A woman stood there—young, still, almost glowing in the firelight behind her. her eyes sparkled green. even in the freezing cold she is wearing a soft silk cloth. I couln&#39;t take my eyes off her, She looked straight into by eyes, It pierced my soul and I felt like my eyeballs were melting. I&#39;ve never seen such a beautiful lady.
+
+“You’ll freeze,” she said. “Come inside.”
 
 Do you feel...
 
@@ -163,20 +177,42 @@ Do you feel...
 &lt;&lt;link &quot;3 - Mixed&quot;&gt;&gt;&lt;&lt;set $score += 3&gt;&gt;&lt;&lt;goto &quot;Step1&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;  
 &lt;&lt;link &quot;4 - Curious&quot;&gt;&gt;&lt;&lt;set $score += 4&gt;&gt;&lt;&lt;goto &quot;Step1&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;  
 &lt;&lt;link &quot;5 - Obsessed&quot;&gt;&gt;&lt;&lt;set $score += 5&gt;&gt;&lt;&lt;goto &quot;Step1&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-</tw-passagedata><tw-passagedata pid="3" name="Step1" tags="" position="1150,400" size="100,100">You&#39;re standing under the roof of a lonely house in the mountains. It’s raining. You’re shivering.
+</tw-passagedata><tw-passagedata pid="3" name="Step1" tags="" position="1150,400" size="100,100">&lt;&lt;if $score is undefined&gt;&gt;
+  &lt;&lt;set $score = 0&gt;&gt;
+&lt;&lt;/if&gt;&gt;
 
-Suddenly, the door opens. A young woman stands in the doorway — her beauty and bright eyes are unreal.
+Warmth hit me like a wave. It&#39;s a very cozy and warm house. She handed me a towel without a word.
 
-Something stirs inside you...
+“Sit by the fire,” she said. “I’ll make tea.” She didn&#39;t ask me who I am, or why I am here. What if I am a thief or some creep? She didn&#39;t bother to question me. I liked her kindness—as well as her eyes, sparkling and bright.
+
+The room was small, quiet, dim. In the corner, someone coughed—a sharp, dry rasp.
+
+“My father,” she said. “He’s not well. We live here alone now.”
+
+I nodded, unsure if I should say something. He didn’t move, just kept coughing.
+
+She sat near me. Too near. I&#39;m sweating now. I cannot distinguish what is hot—the fire, or her.
 
 How do you feel?
 
 &lt;&lt;link &quot;1 - Terrified&quot;&gt;&gt;&lt;&lt;set $score += 1&gt;&gt;&lt;&lt;goto &quot;Step2&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;  
 &lt;&lt;link &quot;2 - Nervous&quot;&gt;&gt;&lt;&lt;set $score += 2&gt;&gt;&lt;&lt;goto &quot;Step2&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;  
-&lt;&lt;link &quot;3 - Mixed&quot; &gt;&gt;&lt;&lt;set $score += 3&gt;&gt;&lt;&lt;goto &quot;Step2&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;  
+&lt;&lt;link &quot;3 - Mixed&quot;&gt;&gt;&lt;&lt;set $score += 3&gt;&gt;&lt;&lt;goto &quot;Step2&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;  
 &lt;&lt;link &quot;4 - Intrigued&quot;&gt;&gt;&lt;&lt;set $score += 4&gt;&gt;&lt;&lt;goto &quot;Step2&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;  
 &lt;&lt;link &quot;5 - Deeply Curious&quot;&gt;&gt;&lt;&lt;set $score += 5&gt;&gt;&lt;&lt;goto &quot;Step2&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-</tw-passagedata><tw-passagedata pid="4" name="Step2" tags="" position="1275,400" size="100,100">You sit by the fire. She tells you about the village: everyone’s gone. Her father is sick. She watches you carefully.
+</tw-passagedata><tw-passagedata pid="4" name="Step2" tags="" position="1275,400" size="100,100">&lt;&lt;if $score is undefined&gt;&gt;
+  &lt;&lt;set $score = 0&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+“I got lost,” I said, voice cracking. “Phone died. I thought I knew this trail.”
+
+She smiled faintly, stirring the kettle. “This valley forgets paths quickly.”
+
+I glanced toward her father’s bed, but still, he didn’t speak. She saw that I was looking at him.
+
+“He used to care for this place. But after what happened… people either left or…”
+
+She trailed off. The fire hissed. The cough from the bed sounded almost... wet.
 
 How do you feel?
 
@@ -185,66 +221,130 @@ How do you feel?
 &lt;&lt;link &quot;3 - Curious but cautious&quot;&gt;&gt;&lt;&lt;set $score += 3&gt;&gt;&lt;&lt;goto &quot;Evaluate&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;  
 &lt;&lt;link &quot;4 - Deeply intrigued&quot;&gt;&gt;&lt;&lt;set $score += 4&gt;&gt;&lt;&lt;goto &quot;Evaluate&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;  
 &lt;&lt;link &quot;5 - I want to know everything&quot;&gt;&gt;&lt;&lt;set $score += 5&gt;&gt;&lt;&lt;goto &quot;Evaluate&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-</tw-passagedata><tw-passagedata pid="5" name="Evaluate" tags="" position="1400,400" size="100,100">&lt;&lt;if $score &lt;= 7&gt;&gt;
-Your fear overwhelms you. You make an excuse and rush out into the night.
+</tw-passagedata><tw-passagedata pid="5" name="Evaluate" tags="" position="1400,400" size="100,100">&lt;&lt;if $score &lt;= 4&gt;&gt;
+A shiver ran through me, deeper than the cold.
 
-[[Continue → RunAway]]
-&lt;&lt;elseif $score &gt;= 8 and $score &lt;= 11&gt;&gt;
-You hesitate. There&#39;s something strange here, but also something mesmerizing.
+[[RunAway]]
 
-[[Stay a bit longer → MiddlePath]]
+&lt;&lt;elseif $score &gt;= 5 and $score &lt;= 11&gt;&gt;
+There&#39;s something strange here, I felt it in my bones.
+
+But her eyes, they are pure and precious. I paused, hand on the doorframe. “What… happened here?” my eyes locked into hers, she glanced a smile, but my question turned down her mood.
+
+She didn’t look up. “Seventy years ago, raiders came through the valley. Burned homes. Took lives.”
+
+I glanced back. She stood by the fire now, silhouetted, motionless.
+
+“They took my father’s eyes,” she said softly.
+
+Her face turned slowly toward me, lit from below. Even in the middle of this creepy atmosphere, she looked pretty to me — her eyes! What mesmerizing ones!
+
+She continued,  
+“Now, he needs a new pair. So we can... be whole again. And we can take care of each other.”
+
+
+[[Continue reading]]
+
 &lt;&lt;else&gt;&gt;
-Curiosity drives you. You can&#39;t leave now.
 
-[[Keep exploring → DeepCuriosity]]
+There&#39;s something strange here, I felt it in my bones.
+
+But her eyes, they are pure and precious. I paused, hand on the doorframe. “What… happened here?” my eyes locked into hers, she glanced a smile, but my question turned down her mood.
+
+She didn’t look up. “Seventy years ago, raiders came through the valley. Burned homes. Took lives.”
+
+I glanced back. She stood by the fire now, silhouetted, motionless.
+
+“They took my father’s eyes,” she said softly.
+
+Her face turned slowly toward me, lit from below. Even in the middle of this creepy atmosphere, she looked pretty to me — her eyes! What mesmerizing ones!
+
+She continued,  
+“Now, he needs a new pair. So we can... be whole again. And we can take care of each other.”
+
+[[I&#39;m Speechless. but,]]
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="6" name="Continue → RunAway" tags="" position="1150,750" size="100,100">You flee the house, the storm washing away her voice behind you.
+</tw-passagedata><tw-passagedata pid="6" name="RunAway" tags="" position="1100,750" size="100,100">“I—I should go,” I said, standing up too quickly. “Thank you, but I’ll find my way back.”
 
-You’ll never know what was waiting.
+She didn’t stop me. Just watched, still smiling. and said, &quot;follow the left path, in 2 hours you will reach a bus stop, but be careful, take the umbrella if you want to&quot;
+
+I dropped the towel and stepped toward the door.
+&quot; Thank you so much, sorry I should leave&quot; I said
+
+Rain waited outside, but it felt safer than the warmth here. 
 
 **THE END**
-</tw-passagedata><tw-passagedata pid="7" name="Stay a bit longer → MiddlePath" tags="" position="1400,525" size="100,100">You remain seated, half listening, half watching. The old man coughs again. You catch a scent in the air—something metallic.
+</tw-passagedata><tw-passagedata pid="7" name="Continue reading" tags="" position="1400,550" size="100,100">
 
-She’s watching you, almost too closely.
+“How will you find matching eyes?” I asked, but my heart is pounding.
 
-[[Push past your fear → DeepCuriosity]]  
-[[Change your mind and flee → RunAway]]
-</tw-passagedata><tw-passagedata pid="8" name="Keep exploring → DeepCuriosity" tags="" position="1575,575" size="100,100">She tells you the real story.
-
-&gt; “Seventy years ago, monsters came here. My father lost his eyes. He needs new ones now.”
-
-The old man turns — eyeless, rotting.
-
-She steps closer.
-
-&gt; “Can you give us yours?”
+She looks at me with both warmth and something darker. “I search for someone… who can give us their pair.”
 
 
+[[I stood straight]]  
+[[RUN!]]
+</tw-passagedata><tw-passagedata pid="8" name="I&#39;m Speechless. but," tags="" position="1600,475" size="100,100">“How will you find matching eyes?” I asked, but my heart is pounding.
 
-[[Back away in horror → Death]]  
-[[Grab a fire stick and defend yourself → FightBack]]
-</tw-passagedata><tw-passagedata pid="9" name="Push past your fear → DeepCuriosity" tags="" position="1425,675" size="100,100">She tells you the real story.
+She looks at me with both warmth and something darker. “I search for someone… who can give us their pair.”
 
-&gt; “Seventy years ago, monsters came here. My father lost his eyes. He needs new ones now.”
+From the bed, the father turns slowly—revealing empty sockets and rotting flesh.
 
-The old man turns — eyeless, rotting.
+Can You Give Me Your Eyes 
+She steps forward, blocking the door.
 
-She steps closer.
+“Can you give me your eyes?” she whispers.
 
-&gt; “Can you give us yours?”
+[[RUN, NOW!]]  
+[[The fire]]
+</tw-passagedata><tw-passagedata pid="9" name="I stood straight" tags="" position="1425,700" size="100,100">From the bed, the father turns slowly—revealing empty sockets and rotting flesh.
 
-[[Back away in horror → Death]]  
-[[Grab a fire stick and defend yourself → FightBack]]
-</tw-passagedata><tw-passagedata pid="10" name="Change your mind and flee → RunAway" tags="" position="1275,750" size="100,100"></tw-passagedata><tw-passagedata pid="11" name="Grab a fire stick and defend yourself → FightBack" tags="" position="1775,575" size="100,100">You snatch a burning stick from the fire and hold it out.
+Can You Give Me Your Eyes 
+She steps forward, blocking the door.
 
-The shadows twist. Her face melts into something hollow.
+“Can you give me your eyes?” she whispers.
 
-You may not survive, but you will not go quietly.
+The eyeless father rises slowly, bones cracking.
+
+[[RUN, NOW!]]  
+[[The fire]]
+</tw-passagedata><tw-passagedata pid="10" name="RUN!" tags="" position="1275,750" size="100,100">My blood turns cold. Without another word, I rushes out, barefoot into the nigh. I want to scream, but I couldn&#39;t. I want to turn back and look, but I couldn&#39;t. Oh! Non-existing god, HELP ME!</tw-passagedata><tw-passagedata pid="11" name="The fire" tags="" position="1775,675" size="100,100">Without a second thought, I grabbed the nearest thing—the burning stick from the fire.
+
+Held it between us. My hands shook. The flame danced. She didn’t flinch.
+
+“I—I don’t think so,” I said. “Stay back.”
+
+The shadows thickened. The fire dimmed, as if choking.
+
+She tilted her head. The smile was gone. but her eyes are still sparkling, fresh as a star
+
+“You don’t need to see,” she said. “You’re lost anyway.”
+
+Her father coughed, A wet, clicking sound filled the room.
 
 
 [[SubmitEmotions]]
 
-</tw-passagedata><tw-passagedata pid="12" name="Back away in horror → Death" tags="" position="1525,825" size="100,100"></tw-passagedata><tw-passagedata pid="13" name="EmotionAggregate" tags="" position="1725,850" size="100,100">:: EmotionAggregate
+</tw-passagedata><tw-passagedata pid="12" name="RUN, NOW!" tags="" position="1525,825" size="100,100">I tried to run, but she was faster than she looked.
+
+Her hand was on my chest, then my face—cold fingers pinning me down. Her strength was impossible.
+
+I screamed.
+
+The fire blinked out.
+
+Darkness swallowed the room.
+
+I felt her breath on my cheek. “It’ll only hurt for a moment.”
+
+Then pain.
+
+White-hot, blinding. Fingernails digging, tearing. A pop, then another. My screams went silent inside my head.
+
+The world vanished.
+
+And in the darkness, I heard her laugh softly.
+
+“Now we can see again.”</tw-passagedata><tw-passagedata pid="13" name="EmotionAggregate" tags="" position="1525,950" size="100,100">:: EmotionAggregate
 &lt;&lt;set $avgFear = 0&gt;&gt;
 &lt;&lt;set $avgCuriosity = 0&gt;&gt;
 
@@ -337,8 +437,28 @@ $(document).one(&#39;:passagedisplay&#39;, function () {
   });
 });
 &lt;&lt;/script&gt;&gt;
-</tw-passagedata><tw-passagedata pid="15" name="FearEnding" tags="" position="2050,800" size="100,100">The collective fear overwhelmed the moment.  
-The traveler turns and runs into the storm, never looking back...
+</tw-passagedata><tw-passagedata pid="15" name="FearEnding" tags="" position="2050,800" size="100,100">I tried to run, but she was faster than she looked.
+
+Her hand was on my chest, then my face—cold fingers pinning me down. Her strength was impossible.
+
+I screamed.
+
+The fire blinked out.
+
+Darkness swallowed the room.
+
+I felt her breath on my cheek. “It’ll only hurt for a moment.”
+
+Then pain.
+
+White-hot, blinding. Fingernails digging, tearing. A pop, then another. My screams went silent inside my head.
+
+The world vanished.
+
+And in the darkness, I heard her laugh softly.
+
+“Now we can see again.”
+
 
 &lt;p&gt;Collected from all players:&lt;/p&gt;
 
@@ -356,8 +476,8 @@ getAverageEmotion().then(function(result) {
   }
 });
 &lt;&lt;/script&gt;&gt;
-</tw-passagedata><tw-passagedata pid="16" name="CuriousEnding" tags="" position="2050,925" size="100,100">Curiosity takes over.  
-He steps forward, facing the girl and the eyeless man with brave resolve...
+</tw-passagedata><tw-passagedata pid="16" name="CuriousEnding" tags="" position="2050,925" size="100,100">I burst through the door, the torch still blazing in my hand, shoving her back into the shadows as the flame caught the dry curtains—then the walls. Her scream twisted into something inhuman as the house lit up like a pyre. I ran, blind and bloody, through the rain, not stopping until the house was a flicker behind me. I collapsed in the grassland, gasping, alive. But then—I noticed the silence. The cold no longer bit. I didn&#39;t feel the rain drops either. I stood up, confused. in the reflection of a puddle, I saw myself, without eyes.
+
 
 &lt;p&gt;Collected from all players:&lt;/p&gt;
 
@@ -375,8 +495,8 @@ getAverageEmotion().then(function(result) {
   }
 });
 &lt;&lt;/script&gt;&gt;
-</tw-passagedata><tw-passagedata pid="17" name="NeutralEnding" tags="" position="2050,1050" size="100,100">The emotions are balanced.  
-He stands frozen at the threshold, unsure whether to flee or fight...
+</tw-passagedata><tw-passagedata pid="17" name="NeutralEnding" tags="" position="2050,1050" size="100,100">I stood frozen at the threshold, heart thundering, the fire crackling behind me, her shadow drawing closer. Her father loomed, hollow-eyed and silent. I gripped the burning stick tighter—but didn’t move. She looked at me—not with hunger, but something softer. “You’re not like the others,” she said. I didn’t know what that meant, and I wasn’t sure I wanted to. The house felt older now, tired. I stepped back, out into the rain, never breaking her gaze. She didn’t follow. Neither did he. I walked until the trees swallowed me again—unsure if I had escaped something terrible, or left something even lonelier behind.
+
 
 &lt;p&gt;Collected from all players:&lt;/p&gt;
 
